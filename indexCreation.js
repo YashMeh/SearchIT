@@ -97,27 +97,30 @@ var client = require('./connection.js');
 // //     console.log(resp);
 // // });
 //Searching
-// client.search({  
-//   index: 'department',
-//   type: 'depInfo',
-//   body: {
-//     query: {
-//       match:{
-//         "title":"biochemistry"
-//       }
-      
-//     }
-//   }
-// },function (error, response,status) {
-//     if (error){
-//       console.log("search error: "+error)
-//     }
-//     else {
-//       console.log("--- Response ---");
-//       console.log(response);
-//       console.log("--- Hits ---");
-//       response.hits.hits.forEach(function(hit){
-//         console.log(hit);
-//       })
-//     }
-// });
+client.search({  
+  index: 'department',
+  type: 'depInfo',
+  body: {
+    query: {
+      match:{
+        title:{
+          query:"BIOLHEMISTRY",
+          fuzziness:2
+        }
+        
+      }
+    },
+  }
+},function (error, response,status) {
+    if (error){
+      console.log("search error: "+error)
+    }
+    else {
+      console.log("--- Response ---");
+      console.log(response);
+      console.log("--- Hits ---");
+      response.hits.hits.forEach(function(hit){
+        console.log(hit);
+      })
+    }
+});

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet"><style>
+    body{
+        background-color: azure;
+        font-family: 'Anton', sans-serif;
+    }
+    #one
+    {
+        margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+#outer
+{
+    width: 50%;
+    height: 300px;
+    border: 3px solid #39414e36;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+#tb
+{
+    border-radius: 20px;
+    width: 300px;
+}
+h4{
+    margin-top: 80px;
+    
+}
+
+    
+    </style>
+    <title>Home Page</title>
+</head>
+<body>
+    <div id="outer">
+    <h4><u>CMC Search</u>
+        
+    </h4>
+    <form action="/search" method="POST" id="one">
+    <input type="text" name="q" id="tb" placeholder="Enter your query">
+    <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    </div>
+   
+    
+</body>
+</html>

@@ -14,7 +14,10 @@ var getResult=function(dept)
             body: {
               query: {
                 match:{
-                  "title":dept
+                  title:{
+                    query:dept,
+                    fuzziness:2
+                  }
                 }
                 
               }
@@ -36,6 +39,17 @@ var getResult=function(dept)
 }
 app.get("/",function(req,res){
     res.sendFile("home.html",{root:__dirname});
+})
+app.post("/search",function(req,res){
+    var q=req.body.q;
+    getResult(q).then(function(arr){
+          arr=arr.hits.hits;
+          console.log(arr);          
+          res.render("result",{arr:arr});
+    }).catch(function(err){
+        console.log(err);
+        res.send("SORRY SOME ERROR OCCURED")
+    })
 })
 
 app.listen(port,function(err){
