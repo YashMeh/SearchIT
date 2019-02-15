@@ -4,7 +4,7 @@ This is a search engine for performing fuzzy search using elasticsearch.js
 
 #### Pre-requesties
 ***
--npm >3.5
+- npm >3.5
 
 #### Installation
 ***
