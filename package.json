@@ -14,7 +14,7 @@
     "dotenv": "^6.2.0",
     "ejs": "^2.6.1",
     "elasticsearch": "^15.4.1",
-    "express": "^4.16.4",
+    "express": "^4.17.1",
     "get-json": "^1.0.1"
   }
 }
