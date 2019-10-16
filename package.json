@@ -11,7 +11,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "csv": "^0.3.7",
-    "dotenv": "^6.2.0",
+    "dotenv": "^8.2.0",
     "ejs": "^2.6.1",
     "elasticsearch": "^15.4.1",
     "express": "^4.16.4",
